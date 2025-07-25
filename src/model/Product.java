@@ -1,8 +1,14 @@
 package model;
 
+/**
+ * Entity from database
+ */
+
 public class Product {
+    //Primary key
     private Long id;
     private String name;
+    //Prevent float number, multiply by 100
     private Integer value;
     private Integer stock;
 

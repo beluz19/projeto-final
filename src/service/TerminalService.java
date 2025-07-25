@@ -2,6 +2,10 @@ package service;
 
 import java.util.Scanner;
 
+/*
+ * Class to interact with user by terminal
+ */
+
 public class TerminalService implements ITerminal{
     private final Scanner scanner;
 
