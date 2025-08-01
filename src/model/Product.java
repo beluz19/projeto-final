@@ -5,14 +5,14 @@ package model;
  */
 
 public class Product {
-    //Primary key
+    // Primary key
     private Long id;
     private String name;
-    //Prevent float number, multiply by 100
+    // Prevent float number, multiply by 100
     private Integer value;
     private Integer stock;
 
-    public Product(){
+    public Product() {
 
     }
 
@@ -60,5 +60,4 @@ public class Product {
         return "Product [id=" + id + ", name=" + name + ", value=" + value + ", stock=" + stock + "]";
     }
 
-    
 }
