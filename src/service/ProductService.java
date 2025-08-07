@@ -13,30 +13,33 @@ public class ProductService {
 
     private final ProductRepository productRepository;
 
-    public ProductService(ProductRepository productRepository){
+    public ProductService(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
 
     /**
      * To persist a new register on database
+     * 
      * @param product
      * @return new product on database with id
      */
-    public Product insert(Product product){
+    public Product insert(Product product) {
         product.setId(null);
         return productRepository.save(product);
     }
 
-     /**
+    /**
      * To persist update data from register on database
      * 
-     * <p><b>Attention: {@code id} is required</b></p>
+     * <p>
+     * <b>Attention: {@code id} is required</b>
+     * </p>
      * 
      * @param product
      * @return new product instance of data on database
      */
-    public Product update(Product product){
-        if (product.getId() == null){
+    public Product update(Product product) {
+        if (product.getId() == null) {
             throw new IllegalArgumentException("Entity id is required");
         }
 
@@ -45,13 +48,16 @@ public class ProductService {
 
     /**
      * To get all register on database
+     * 
      * @return
      */
-    public List<Product> getAll(){
+    public List<Product> getAll() {
         return productRepository.findAll();
     }
+
     /**
      * Trying find product by id on database
+     * 
      * @param id
      * @return when founded product return it otherwise empty
      */

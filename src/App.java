@@ -109,7 +109,7 @@ public class App implements Runnable {
         terminalService.showMessage("=== ===", 2000);
     }
 
-    private void uptadeProductById(){
+    private void uptadeProductById() {
         try {
             terminalService.showMessage("DIGITE O ID DA BUSCA: ");
             var id = terminalService.readLineAsInt();
@@ -120,7 +120,7 @@ public class App implements Runnable {
             } else {
                 var prod = product.get();
                 var collectProduct = collectProductDataFromTerminal.collectByProduct(prod);
-                if(collectProduct.isPresent()){
+                if (collectProduct.isPresent()) {
                     productService.update(collectProduct.get());
                 }
             }
@@ -129,4 +129,3 @@ public class App implements Runnable {
         }
     }
 }
-
